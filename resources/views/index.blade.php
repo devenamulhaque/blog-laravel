@@ -112,17 +112,17 @@
 
                             <div class="mt-4">
                                 <h1 class="text-3xl">
-                                    <a href="/posts/first-post">This is a big title and it will look great on two or even three lines. Wooohoo!</a>
+                                    <a href="/posts/<?= $post->slug; ?>"><?= $post->title; ?></a>
                                 </h1>
 
                                 <span class="mt-2 block text-gray-400 text-xs">
-                                        Published <time>1 day ago</time>
+                                        Published <time><?= $post->date; ?></time>
                                     </span>
                             </div>
                         </header>
 
                         <div class="text-sm mt-2">
-                            <?= $post; ?>
+                            <?= $post->body; ?>
                         </div>
 
                         <footer class="flex justify-between items-center mt-8">
