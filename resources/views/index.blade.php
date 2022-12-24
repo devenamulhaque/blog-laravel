@@ -92,7 +92,7 @@
 
                         <div class="mt-4">
                             <h1 class="text-3xl">
-                                <a href="/posts/<?= $post->slug; ?>"><?= $post->title; ?></a>
+                                <a href="/posts/<?= $post->id; ?>"><?= $post->title; ?></a>
                             </h1>
 
                             <span class="mt-2 block text-gray-400 text-xs">
@@ -102,7 +102,7 @@
                     </header>
 
                     <div class="text-sm mt-2">
-                            <?= $post->body; ?>
+                            <?= $post->excerpt; ?>
                     </div>
 
                     <footer class="flex justify-between items-center mt-8">
@@ -115,7 +115,7 @@
                         </div>
 
                         <div class="hidden lg:block">
-                            <a href="/posts/{{$post->slug}}"
+                            <a href="/posts/{{$post->id}}"
                                class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8"
                             >Read More</a>
                         </div>
